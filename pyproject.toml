@@ -4,10 +4,13 @@ version = "0.1.0"
 description = ""
 authors = ["Danil Melkozerov <danmelk.dev@gmail.com>"]
 readme = "README.md"
-packages = [{include = "reimagined_broccoli"}]
+packages = [{include = "reimagined-packages"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+requests = "^2.31.0"
+revchatgpt = "^6.6.0"
+python-dotenv = "^1.0.0"
 flask = "^2.3.2"
 
 

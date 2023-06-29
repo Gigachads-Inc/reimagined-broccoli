@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "reimagined-broccoli"
+version = "0.1.0"
+description = ""
+authors = ["Danil Melkozerov <danmelk.dev@gmail.com>"]
+readme = "README.md"
+packages = [{include = "reimagined_broccoli"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^2.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

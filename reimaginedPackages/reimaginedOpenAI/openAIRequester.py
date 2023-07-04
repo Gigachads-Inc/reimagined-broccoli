@@ -8,12 +8,11 @@ token = os.environ.get('ACCESS_TOKEN')
 class OpenAIWrapper:
 
     prompts = {
-        "summary": "Please make a short summary from the following text: ",
+        "summary": "Please make a short summary in total of 50 letters from the following text: ",
         "hello world": "say Hello World!"
     }
 
-    def __init__(self, token, context):
-        self.context = context,
+    def __init__(self, token):
         self.token = token,
         config = {"access_token" : f"{token}"}
         self.ChatGPT = openAI(config)
@@ -22,7 +21,7 @@ class OpenAIWrapper:
         match codename:
             case 'summary':
                 prompt = self.prompts.get('summary')
-                self.ask(f"{prompt} {self.context}")
+                return prompt
             case _:
                 raise KeyError("Prompt codename doesn't exist")
 
@@ -30,7 +29,7 @@ class OpenAIWrapper:
         response = ""
         for data in self.ChatGPT.ask(prompt):
             response = data["message"]
-        return(response)
+        print(response)
 
     def conversation(self):
         conversation = ""
@@ -40,6 +39,3 @@ class OpenAIWrapper:
                 message = data["message"][len(conversation):]
                 print(message, end="", flush=True)
                 conversation = data["message"]
-
-ChatGPT = OpenAIWrapper(token=token, context="")
-ChatGPT.promptGenerator(input(''))

@@ -9,8 +9,8 @@ def catch():
     if not sourceData:
         return "No data to process."
     
-    ChatGPT.processData(sourceData)
-    return "Processed successfully." 
+    response = ChatGPT.processData(sourceData)
+    return f"{response}"
 
 if __name__ == '__main__':
     ChatGPT = ChatGPTProcesser()

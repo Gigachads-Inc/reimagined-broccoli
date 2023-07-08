@@ -17,8 +17,8 @@ class OpenAIWrapper:
         config = {"access_token" : f"{token}"}
         self.ChatGPT = openAI(config)
 
-    def promptGenerator(self, codename):
-        match codename:
+    def promptGenerator(self, flag):
+        match flag:
             case 'summary':
                 prompt = self.prompts.get('summary')
                 return prompt

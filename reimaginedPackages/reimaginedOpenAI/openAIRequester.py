@@ -7,6 +7,7 @@ token = os.environ.get('ACCESS_TOKEN')
 
 class OpenAIWrapper:
 
+    # Custom ENUM with prompt code values in different module?
     prompts = {
         "summary": "Please make a short summary in total of 50 letters from the following text: ",
         "hello world": "say Hello World!"

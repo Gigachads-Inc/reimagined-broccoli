@@ -12,6 +12,7 @@ class ChatGPTProcesser:
     def __init__(self):
         self.ChatGPT = OpenAIWrapper(token=token)
 
+    # No flag/content/title is found, make a error handle of it
     def processData(self, jsonObject):
         article = Article(jsonObject['title'], jsonObject['content'], jsonObject['flag'])
         prompt = self.ChatGPT.promptGenerator(article.flag)

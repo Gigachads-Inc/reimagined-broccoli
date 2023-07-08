@@ -3,6 +3,8 @@ from main import ChatGPTProcesser
 
 app = Flask(__name__)
 
+# JSON object recieving test is needed
+# See: https://flask.palletsprojects.com/en/2.3.x/testing/
 @app.route('/send', methods=['POST'])
 def catch():
     sourceData = request.get_json()

@@ -1,5 +1,5 @@
 from flask import Flask, request
-from main import ChatGPTProcesser 
+from reimaginedPackages.reimaginedServer.main import ChatGPTProcesser 
 
 app = Flask(__name__)
 

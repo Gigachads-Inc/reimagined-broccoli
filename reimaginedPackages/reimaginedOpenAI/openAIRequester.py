@@ -1,9 +1,4 @@
 from revChatGPT.V1 import Chatbot as openAI
-from dotenv import load_dotenv as env
-import os
-env()
-
-token = os.environ.get('ACCESS_TOKEN')
 
 class OpenAIWrapper:
 

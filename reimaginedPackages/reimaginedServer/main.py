@@ -1,5 +1,5 @@
 from reimaginedPackages.reimaginedOpenAI.openAIRequester import OpenAIWrapper
-from models import Article
+from reimaginedPackages.reimaginedServer.models import Article
 
 from dotenv import load_dotenv as env
 import os

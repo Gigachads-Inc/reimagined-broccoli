@@ -12,6 +12,7 @@ requests = "^2.31.0"
 revchatgpt = "^6.6.0"
 python-dotenv = "^1.0.0"
 flask = "^2.3.2"
+pytest = "^7.4.0"
 
 
 [build-system]

@@ -14,6 +14,12 @@ def catch():
     response = ChatGPT.processData(sourceData)
     return f"{response}"
 
+# TODO: handle the Access Token AKA login session from chat.openai.com
+@app.route('/api', methods=['POST'])
+def set_api():
+    return "all settled!"
+
+
 if __name__ == '__main__':
     ChatGPT = ChatGPTProcesser()
     app.run(debug=True, port=5000)
